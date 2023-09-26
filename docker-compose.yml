@@ -32,3 +32,8 @@ services:
       - './backend_OdourCollect_2.0:/app'
     depends_on:
       - mariadb
+  temp_composer:
+    image: composer
+    volumes:
+        - './OdourCollect_2.0_backend:/app'
+    command: install
